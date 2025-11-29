@@ -4,3 +4,4 @@ language = "en"
 src = "src"
 title = "P&S"
 [preprocessor.plantuml]
+plantuml-cmd="http://localhost:8888"
