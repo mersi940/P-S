@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <POU Name="GetWaterDuration" Id="{0e665143-0f50-47dc-b43f-c2460d0fd759}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION GetWaterDuration : TIME
+VAR_INPUT
+	MoistIn:REAL ;
+	TempIn:REAL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[GetWaterDuration:= REAL_TO_TIME(10 + (TempIn - 20) - (MoistIn * 0.1)) * T#1S;
+IF GetWaterDuration < T#5S THEN GetWaterDuration :=T#5S; END_IF;
+IF GetWaterDuration > T#20S THEN GetWaterDuration :=T#20S; END_IF;
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="GetWaterDuration">
+      <LineId Id="21" Count="3" />
+      <LineId Id="12" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

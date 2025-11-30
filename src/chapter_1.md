@@ -1,10 +1,10 @@
 # Chapter 1
 ```plantuml
 @startuml
-[*] --> Init
-Init --> ReadSensors
-ReadSensors --> UpdateGVL
-UpdateGVL --> ReadSensors : Loop
+[*] --> Initial state
+Initial state --> ReadSensors(Moisture level and temperature)
+ReadSensors --> Idle
+Idle --> ReadSensors : Loop
 @enduml
 
 ```

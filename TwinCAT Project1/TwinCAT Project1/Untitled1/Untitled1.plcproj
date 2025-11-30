@@ -22,10 +22,13 @@
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
     </Compile>
-    <Compile Include="POUs\POU.TcPOU">
+    <Compile Include="POUs\GetWaterDuration.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\task1.TcPOU">
+    <Compile Include="POUs\MonitoringTheSoilTask.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\WateringTask.TcPOU">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -48,6 +51,11 @@
       <DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc3_Module</Namespace>
     </PlaceholderReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Untitled1.tmc">
+      <SubType>Content</SubType>
+    </None>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>
